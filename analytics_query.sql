@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `data-with-darshil.uber_data_engineering_yt.tbl_analytics` AS (
+CREATE OR REPLACE TABLE `data.uber_data_engineering_yt.tbl_analytics` AS (
 SELECT 
 f.trip_id,
 f.VendorID,
@@ -21,7 +21,7 @@ f.improvement_surcharge,
 f.total_amount
 FROM 
 
-`data-with-darshil.uber_data_engineering_yt.fact_table` f
+`data.uber_data_engineering_yt.fact_table` f
 JOIN `data-with-darshil.uber_data_engineering_yt.datetime_dim` d  ON f.datetime_id=d.datetime_id
 JOIN `data-with-darshil.uber_data_engineering_yt.passenger_count_dim` p  ON p.passenger_count_id=f.passenger_count_id  
 JOIN `data-with-darshil.uber_data_engineering_yt.trip_distance_dim` t  ON t.trip_distance_id=f.trip_distance_id  
