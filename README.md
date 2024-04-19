@@ -1,11 +1,28 @@
+# Uber Data Analysis Project
+
 ## Introduction
-The goal of this project is to perform data analytics on Uber data using various tools and technologies, including GCP Storage, Python, Compute Instance, Mage Data Pipeline Tool, BigQuery, and Looker Studio.
+This project focuses on analyzing Uber trip data using Python. The dataset is processed and transformed into a structured format suitable for analysis and visualization.
 
-## Technology Used
-- Programming Language - Python
+## Data Pipeline
+The data pipeline involves several steps:
+1. Data loading from an external API.
+2. Transformation of raw data into structured formats.
+3. Exporting the transformed data to a BigQuery warehouse.
 
-## Dataset Used
-TLC Trip Record Data
-Yellow and green taxi trip records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. 
-1. Website - https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-2. Data Dictionary - https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
+## Project Structure
+- **Uber Data Pipeline.ipynb**: Jupyter Notebook containing the code for data processing and transformation.
+- **extract.py**: Python script for loading data from an API.
+- **load.py**: Python script for exporting data to BigQuery.
+- **transform.py**: Python script for transforming raw data into structured formats.
+
+## Usage
+To replicate the analysis:
+1. Clone the repository.
+2. Run the Jupyter Notebook `Uber Data Pipeline.ipynb`.
+3. Ensure required Python packages are installed.
+
+## Technologies Used
+- Python
+- Pandas
+- Requests
+- BigQuery
